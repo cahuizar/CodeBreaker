@@ -10,6 +10,13 @@
     position: absolute;
     width: 100%;
 }
+.form-control{
+    width: 75%;
+    margin-top: 50px;
+}
+.home-button{
+    margin-top: 20px;
+}
 /* footer */
 .footer-distributed {
     background-color: #d63636;
@@ -27,13 +34,11 @@
     vertical-align: top;
 }
 
-
 /* Footer left */
 
 .footer-distributed .footer-left {
     width: 69%;
 }
-
 
 /* The company logo */
 
@@ -42,7 +47,6 @@
     margin: 0;
     font-weight:500;
 }
-
 
 /* Footer links */
 
