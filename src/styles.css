@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+.logo, .nav-background{
+    height: 150px;
+    width: 150px;
+}
+
+.nav-background{
+    -webkit-filter: blur(6px);
+    filter: blur(6px);
+    background-color: #EAECF0;
+    position: absolute;
+    width: 100%;
+}
