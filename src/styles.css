@@ -1,3 +1,5 @@
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
 .logo, .nav-background{
     height: 150px;
     width: 150px;
@@ -10,13 +12,31 @@
     position: absolute;
     width: 100%;
 }
+
 .form-control{
     width: 75%;
     margin-top: 50px;
+    font-size: 22px;
 }
-.home-button{
+
+.mat-raised-button{
+    background-color: #d63636;
+    color: white;
     margin-top: 20px;
 }
+
+button.mat-raised-button {
+    color: white;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button.home-button{
+    width: 150px;
+    height: 60px;
+}
+
 /* footer */
 .footer-distributed {
     background-color: #d63636;
