@@ -10,9 +10,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { EncryptComponent } from './encrypt/encrypt.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
+    { path: 'encrypt', component: EncryptComponent },
     { path: '', component: HomeComponent },
     { path: '**', component: HomeComponent }
 ];
@@ -23,6 +25,7 @@ const appRoutes: Routes = [
     HomeComponent,
     NavComponent,
     FooterComponent,
+    EncryptComponent,
   ],
   imports: [
     BrowserModule,
