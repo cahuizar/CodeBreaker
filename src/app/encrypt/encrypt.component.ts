@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EncryptComponent implements OnInit {
     ciphers = [
-        { name: 'Caesar Shift', img: '../../assets/caesarShift.png' },
-        { name: 'Keyword', img: '../../assets/keyword.png' },
-        { name: 'Transpose', img: '../../assets/transpose.png' },
-        { name: 'Kasiski', img: '../../assets/kasiski.png' },
-        { name: 'Permutation', img: '../../assets/permutation.png' }
+        { name: 'Caesar Shift', img: '../../assets/caesarShift.png', path: '/caesar' },
+        { name: 'Keyword', img: '../../assets/keyword.png', path:'/keyword' },
+        { name: 'Transpose', img: '../../assets/transpose.svg', path:'/transpose' },
+        { name: 'Kasiski', img: '../../assets/kasiski.svg', path:'/kasiski' },
+        { name: 'Permutation', img: '../../assets/permutation.svg', path:'/permutation' }
     ]
   constructor() {
 

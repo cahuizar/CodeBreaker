@@ -43,6 +43,10 @@ button.home-button{
     width: 40%;
     padding-top:70px;
 }
+img.cipher-img{
+    height: 200px;
+    width: auto;
+}
 /* footer */
 .footer-distributed {
     background-color: #d63636;
