@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolsComponent implements OnInit {
     tools = [
-        { name:'Frequency', img:'assets/frequency.svg', path:'/frequency'  },
-        { name:'IC ', img:'assets/ic.svg', path:'/ic'  },
-        { name:'Worksheet', img:'assets/worksheet.svg', path:'/worksheet'  },
+        { name:'Frequency', img:'assets/frequency.png', path:'/frequency'  },
+        { name:'IC ', img:'assets/ic.png', path:'/ic'  },
+        { name:'Worksheet', img:'assets/worksheet.png', path:'/worksheet'  },
     ]
   constructor() { }
 
