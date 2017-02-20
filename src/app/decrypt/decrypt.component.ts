@@ -13,7 +13,10 @@ export class DecryptComponent implements OnInit {
         { name: 'Kasiski', img: 'assets/kasiski.svg', path:'/kasiski' },
         { name: 'Permutation', img: 'assets/permutation.svg', path:'/permutation' }
     ]
-    tools = [{}
+    tools = [
+        { name:'Frequency', img:'assets/frequency.svg', path:'/frequency'  },
+        { name:'Index Coincidence', img:'assets/ic.svg', path:'/ic'  },
+        { name:'Worksheet', img:'assets/worksheet.svg', path:'/worksheet'  },
     ]
   constructor() { }
 
