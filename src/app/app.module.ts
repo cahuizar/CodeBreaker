@@ -12,6 +12,8 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { EncryptComponent } from './encrypt/encrypt.component';
 import { DecryptComponent } from './decrypt/decrypt.component';
+import { ToolsComponent } from './tools/tools.component';
+import { CiphersComponent } from './ciphers/ciphers.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -29,6 +31,8 @@ const appRoutes: Routes = [
     FooterComponent,
     EncryptComponent,
     DecryptComponent,
+    ToolsComponent,
+    CiphersComponent,
   ],
   imports: [
     BrowserModule,

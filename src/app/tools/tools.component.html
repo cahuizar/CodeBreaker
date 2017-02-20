@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-offset-1 col-sm-11">
+        <p class="heading-ciphers">Your cracking tools: </p>
+    </div>
+    <div class="col-xs-12 col-md-4" *ngFor = "let tool of tools">
+        <div class="ciphers">
+            <md-card>
+                <a routerLink="{{tool.path}}">
+                    <img class="cipher-img" md-card-image src="{{tool.img}}">
+                    <md-card-content>
+                       <p>{{ tool.name }}</p>
+                    </md-card-content>
+                </a>
+            </md-card>
+        </div>
+    </div>
+</div>

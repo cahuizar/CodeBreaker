@@ -1,0 +1,11 @@
+<div class="col-xs-12 col-md-4" *ngFor = "let cipher of ciphers">
+    <div class="ciphers">
+        <md-card>
+            <a routerLink="{{cipher.path}}">
+                <img class="cipher-img" md-card-image src="{{cipher.img}}">
+                <md-card-content>
+                   <p>{{ cipher.name }}</p>
+                </md-card-content>
+            </a>
+        </md-card>
+    </div>

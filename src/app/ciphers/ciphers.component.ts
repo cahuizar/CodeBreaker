@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-decrypt',
-  templateUrl: './decrypt.component.html',
-  styleUrls: ['./decrypt.component.css']
+  selector: 'app-ciphers',
+  templateUrl: './ciphers.component.html',
+  styleUrls: ['./ciphers.component.css']
 })
-export class DecryptComponent implements OnInit {
+export class CiphersComponent implements OnInit {
     ciphers = [
         { name: 'Caesar Shift', img: 'assets/caesarShift.png', path: '/caesar' },
         { name: 'Keyword', img: 'assets/keyword.png', path:'/keyword' },
