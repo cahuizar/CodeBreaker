@@ -1,3 +1,32 @@
-<p>
-  decrypt works!
-</p>
+<div class="row">
+    <div class="col-xs-12 home-icon">
+        <a md-fab routerLink="/home"><md-icon>home</md-icon></a>
+    </div>
+    <div class="col-xs-12 col-md-4" *ngFor = "let cipher of ciphers">
+        <div class="ciphers">
+            <md-card>
+                <a routerLink="{{cipher.path}}">
+                    <img class="cipher-img" md-card-image src="{{cipher.img}}">
+                    <md-card-content>
+                       <p>{{ cipher.name }}</p>
+                    </md-card-content>
+                </a>
+            </md-card>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-4" *ngFor = "let tool of tools">
+        <div class="ciphers">
+            <md-card>
+                <a routerLink="{{tool.path}}">
+                    <img class="cipher-img" md-card-image src="{{tool.img}}">
+                    <md-card-content>
+                       <p>{{ tool.name }}</p>
+                    </md-card-content>
+                </a>
+            </md-card>
+        </div>
+    </div>
+</div>

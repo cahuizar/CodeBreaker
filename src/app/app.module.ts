@@ -16,6 +16,7 @@ import { DecryptComponent } from './decrypt/decrypt.component';
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'encrypt', component: EncryptComponent },
+    { path: 'decrypt', component: DecryptComponent },
     { path: '', component: HomeComponent },
     { path: '**', component: HomeComponent }
 ];
