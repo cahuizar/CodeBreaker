@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-encrypt',
-  templateUrl: './encrypt.component.html',
-  styleUrls: ['./encrypt.component.css']
+  selector: 'app-decrypt',
+  templateUrl: './decrypt.component.html',
+  styleUrls: ['./decrypt.component.css']
 })
-export class EncryptComponent implements OnInit {
+export class DecryptComponent implements OnInit {
     ciphers = [
         { name: 'Caesar Shift', img: 'assets/caesarShift.png', path: '/caesar' },
         { name: 'Keyword', img: 'assets/keyword.png', path:'/keyword' },
@@ -13,9 +13,9 @@ export class EncryptComponent implements OnInit {
         { name: 'Kasiski', img: 'assets/kasiski.svg', path:'/kasiski' },
         { name: 'Permutation', img: 'assets/permutation.svg', path:'/permutation' }
     ]
-  constructor() {
-
-  }
+    tools = [{}
+    ]
+  constructor() { }
 
   ngOnInit() {
   }
