@@ -1,5 +1,9 @@
 @import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 
+.logo{
+    cursor: pointer;
+}
+
 .logo, .nav-background{
     height: 150px;
     width: 150px;
@@ -24,7 +28,15 @@
     color: white;
     margin-top: 20px;
 }
+a{
+    color: black;
+    text-decoration: none;
 
+}
+a:hover{
+    color: red;
+    text-decoration: none;
+}
 button.mat-raised-button {
     color: white;
     margin-top: 20px;
@@ -45,7 +57,19 @@ button.home-button{
 }
 img.cipher-img{
     height: 200px;
-    width: auto;
+}
+
+.mat-fab, .mat-mini-fab {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: #d63636;
+}
+.mat-fab:hover{
+    color: white;
+}
+
+.home-icon{
+    margin-top: 30px;
+    padding-left: 70px;
 }
 /* footer */
 .footer-distributed {
