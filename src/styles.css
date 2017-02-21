@@ -79,6 +79,40 @@ img.cipher-img{
     font-weight: bold;
     color: #d63636;
 }
+
+.slider-div{
+    width: 40%;
+    padding-top: 60px;
+}
+md-slider{
+    width: 100%;
+}
+
+.cipher-title{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #d63636;
+}
+.cipher-description{
+    font-size: 16px;
+}
+
+.center-aligned{
+    text-align: center;
+}
+
+.mat-slider-thumb, .mat-slider-thumb-label, .mat-slider-track-fill {
+    background-color: #d63636;
+}
+.mat-sidenav, .mat-slider-thumb-label-text, .mat-toolbar {
+    color: white;
+}
+
+.cipher-question{
+    font-weight: bold;
+}
+
 /* footer */
 .footer-distributed {
     background-color: #d63636;
@@ -223,5 +257,8 @@ img.cipher-img{
     }
     .footer-distributed .footer-center i {
         margin-left: 0;
+    }
+    .slider-div{
+        width: 90%;
     }
 }

@@ -14,11 +14,13 @@ import { EncryptComponent } from './encrypt/encrypt.component';
 import { DecryptComponent } from './decrypt/decrypt.component';
 import { ToolsComponent } from './tools/tools.component';
 import { CiphersComponent } from './ciphers/ciphers.component';
+import { CaesarComponent } from './caesar/caesar.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'encrypt', component: EncryptComponent },
     { path: 'decrypt', component: DecryptComponent },
+    { path: 'caesar', component: CaesarComponent },
     { path: '', component: HomeComponent },
     { path: '**', component: HomeComponent }
 ];
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
     DecryptComponent,
     ToolsComponent,
     CiphersComponent,
+    CaesarComponent,
   ],
   imports: [
     BrowserModule,
