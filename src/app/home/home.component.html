@@ -1,17 +1,19 @@
-<div class="row">
-    <div class="col-xs-12 textarea">
-        <textarea class="form-control center-block" name="name" rows="15" placeholder="Enter the text you want to encrypt or decipher..."></textarea>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-6">
-        <div class="center-aligned">
-            <button md-raised-button class="home-button" routerLink="/encrypt">Encrypt</button>
+<form class="home-form">
+    <div class="row">
+        <div class="col-xs-12 textarea">
+            <textarea class="form-control center-block" name="name" rows="15" placeholder="Enter the text you want to encrypt or decipher..." #text></textarea>
         </div>
     </div>
-    <div class="col-xs-6">
-        <div class="center-aligned">
-            <button md-raised-button class="home-button center-block" routerLink="/decrypt">Decrypt</button>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="center-aligned">
+                <button md-raised-button class="home-button" (click) = "encrypt(text)" routerLink="/encrypt">Encrypt</button>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="center-aligned">
+                <button md-raised-button class="home-button center-block" (click) = "decrypt(text)" routerLink="/decrypt">Decrypt</button>
+            </div>
         </div>
     </div>
-</div>
+</form>

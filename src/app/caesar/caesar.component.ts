@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeComponent } from '../home/home.component';
+
 
 @Component({
   selector: 'app-caesar',
   templateUrl: './caesar.component.html',
-  styleUrls: ['./caesar.component.css']
+  styleUrls: ['./caesar.component.css'],
+  directives: [ HomeComponent ]
 })
 export class CaesarComponent {
       autoTicks = false;
