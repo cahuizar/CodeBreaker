@@ -15,12 +15,15 @@ import { DecryptComponent } from './decrypt/decrypt.component';
 import { ToolsComponent } from './tools/tools.component';
 import { CiphersComponent } from './ciphers/ciphers.component';
 import { CaesarComponent } from './caesar/caesar.component';
+import { EncryptHeaderButtonsComponent } from './encrypt-header-buttons/encrypt-header-buttons.component';
+import { KeywordEncryptComponent } from './keyword-encrypt/keyword-encrypt.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'encrypt', component: EncryptComponent },
     { path: 'decrypt', component: DecryptComponent },
     { path: 'caesar', component: CaesarComponent },
+    { path: 'keyword-encrypt', component: KeywordEncryptComponent },
     { path: '', component: HomeComponent },
     { path: '**', component: HomeComponent }
 ];
@@ -36,6 +39,8 @@ const appRoutes: Routes = [
     ToolsComponent,
     CiphersComponent,
     CaesarComponent,
+    EncryptHeaderButtonsComponent,
+    KeywordEncryptComponent,
   ],
   imports: [
     BrowserModule,

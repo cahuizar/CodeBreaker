@@ -114,6 +114,15 @@ md-slider{
     font-weight: bold;
 }
 
+md-input-container{
+    width: 70%;
+}
+
+.mat-input-underline .mat-input-ripple {
+    background-color : #d63636;
+}
+
+
 /* footer */
 .footer-distributed {
     background-color: #d63636;
