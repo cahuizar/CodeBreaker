@@ -17,6 +17,7 @@ import { CiphersComponent } from './ciphers/ciphers.component';
 import { CaesarComponent } from './caesar/caesar.component';
 import { EncryptHeaderButtonsComponent } from './encrypt-header-buttons/encrypt-header-buttons.component';
 import { KeywordEncryptComponent } from './keyword-encrypt/keyword-encrypt.component';
+import { PermutationEncryptComponent } from './permutation-encrypt/permutation-encrypt.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
     { path: 'decrypt', component: DecryptComponent },
     { path: 'caesar', component: CaesarComponent },
     { path: 'keyword-encrypt', component: KeywordEncryptComponent },
+    { path: 'permutation-encrypt', component: PermutationEncryptComponent },
     { path: '', component: HomeComponent },
     { path: '**', component: HomeComponent }
 ];
@@ -41,6 +43,7 @@ const appRoutes: Routes = [
     CaesarComponent,
     EncryptHeaderButtonsComponent,
     KeywordEncryptComponent,
+    PermutationEncryptComponent,
   ],
   imports: [
     BrowserModule,
