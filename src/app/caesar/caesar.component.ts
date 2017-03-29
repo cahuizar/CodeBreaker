@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CaesarShift } from '../caesar-shift';
 
 
 @Component({
@@ -17,13 +18,31 @@ export class CaesarComponent {
       thumbLabel = true;
       value = 1;
       vertical = false;
+      text : string[];
+      pathText: String;
+      selectedValue: number;
+      numColumns = [];
+      result: string;
+      CaesarShift: CaesarShift;
 
-      get tickInterval(): number | 'auto' {
-        return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : null;
+
+      constructor(){
+        // shifted 1 should be ifmmpnzobnfjtdbsmpt
+        this.CaesarShift = new CaesarShift();
+        this.pathText = "hellomynameiscarlos";
+        this.generateColumns();
+        console.log(`Encrypting: ${this.pathText}`);
       }
-      set tickInterval(v) {
-        this._tickInterval = Number(v);
+
+      generateColumns(){
+        for(let i = 1; i < 26; i++){
+          this.numColumns.push({value: i, viewValue: i});
+        }
       }
-      private _tickInterval = 1;
+
+      shiftText(){
+        this.result = this.CaesarShift.shift(this.pathText, this.selectedValue);
+        console.log(`Result: ${this.result}`);
+      }
 
 }

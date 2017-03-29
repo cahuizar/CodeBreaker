@@ -13,18 +13,13 @@
                   <p class="cipher-question">
                       How many places would you like to shift?:
                   </p>
-                <md-slider
-                    class="example-margin"
-                    [disabled]="disabled"
-                    [invert]="invert"
-                    [max]="max"
-                    [min]="min"
-                    [step]="step"
-                    [thumb-label]="thumbLabel"
-                    [tick-interval]="tickInterval"
-                    [value]="value"
-                    [vertical]="vertical">
-                </md-slider>
+                <div class="center-aligned">
+                      <md-select placeholder="# of Shifts" [(ngModel)]="selectedValue" (change) = "shiftText()" >
+                            <md-option *ngFor="let column of numColumns" [value]="column.value">
+                              {{column.viewValue}}
+                            </md-option>
+                    </md-select>
+                </div>
                 <div class="center-aligned">
                     <button md-raised-button class="home-button" routerLink="/encrypted">Submit</button>
                 </div>
