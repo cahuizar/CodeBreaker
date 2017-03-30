@@ -26,6 +26,7 @@ import { DecryptHeaderButtonsComponent } from './decrypt-header-buttons/decrypt-
 import { TransposeDecryptComponent } from './transpose-decrypt/transpose-decrypt.component';
 import { AnagramDecryptComponent } from './anagram-decrypt/anagram-decrypt.component';
 import { SolutionComponent } from './solution/solution.component';
+import { Singleton } from './singleton.service';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -74,7 +75,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MaterialModule
   ],
-  providers: [],
+  providers: [Singleton],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

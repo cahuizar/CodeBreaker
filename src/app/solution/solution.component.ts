@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Singleton } from '../singleton.service';
 
 @Component({
   selector: 'app-solution',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solution.component.css']
 })
 export class SolutionComponent implements OnInit {
-
-  constructor() { }
+  private _solution: string;
+  
+  constructor(private singleton: Singleton) {
+    this._solution = singleton.solution;
+    console.log('you did it:',this._solution);
+  }
 
   ngOnInit() {
   }

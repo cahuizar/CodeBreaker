@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CaesarShift } from '../caesar-shift';
+import { Singleton } from '../singleton.service';
 
 
 @Component({
@@ -26,10 +27,10 @@ export class CaesarComponent {
       CaesarShift: CaesarShift;
 
 
-      constructor(){
+      constructor(private singleton: Singleton){
         // shifted 1 should be ifmmpnzobnfjtdbsmpt
         this.CaesarShift = new CaesarShift();
-        this.pathText = "hellomynameiscarlos";
+        this.pathText = singleton.solution;
         this.generateColumns();
         console.log(`Encrypting: ${this.pathText}`);
       }
@@ -42,6 +43,7 @@ export class CaesarComponent {
 
       shiftText(){
         this.result = this.CaesarShift.shift(this.pathText, this.selectedValue);
+        this.singleton.solution = this.result;
         console.log(`Result: ${this.result}`);
       }
 
