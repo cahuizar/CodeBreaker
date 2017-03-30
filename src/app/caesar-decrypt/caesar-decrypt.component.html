@@ -13,9 +13,15 @@
                   <p class="cipher-question">
                       Select the correct one:
                   </p>
-
+                  <div class="center-aligned">
+                      <md-select placeholder="Result:" [(ngModel)]="selectedValue" >
+                            <md-option *ngFor="let column of resultsColumns" [value]="column.value">
+                              {{column.viewValue}}
+                            </md-option>
+                    </md-select>
+                  </div>
                 <div class="center-aligned">
-                    <button md-raised-button class="home-button" routerLink="/decrypted">Submit</button>
+                    <button md-raised-button class="home-button" routerLink="/solution">Submit</button>
                 </div>
                 </md-card-content>
             </md-card>

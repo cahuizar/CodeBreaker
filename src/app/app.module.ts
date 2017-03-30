@@ -25,6 +25,7 @@ import { KeywordDecryptComponent } from './keyword-decrypt/keyword-decrypt.compo
 import { DecryptHeaderButtonsComponent } from './decrypt-header-buttons/decrypt-header-buttons.component';
 import { TransposeDecryptComponent } from './transpose-decrypt/transpose-decrypt.component';
 import { AnagramDecryptComponent } from './anagram-decrypt/anagram-decrypt.component';
+import { SolutionComponent } from './solution/solution.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -38,6 +39,7 @@ const appRoutes: Routes = [
     { path: 'transpose-encrypt', component: TransposeEncryptComponent },
     { path: 'transpose-decrypt', component: TransposeDecryptComponent },
     { path: 'caesar-decrypt', component: CaesarDecryptComponent },
+    { path: 'solution', component: SolutionComponent },
     { path: '', component: HomeComponent },
     { path: '**', component: HomeComponent }
 ];
@@ -63,6 +65,7 @@ const appRoutes: Routes = [
     DecryptHeaderButtonsComponent,
     TransposeDecryptComponent,
     AnagramDecryptComponent,
+    SolutionComponent,
   ],
   imports: [
     BrowserModule,
