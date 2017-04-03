@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Singleton } from '../singleton.service';
 
 @Component({
   selector: 'app-anagram-decrypt',
@@ -17,6 +18,11 @@ export class AnagramDecryptComponent {
         {value:4, viewValue: '4'},
         {value:5, viewValue: '5'},
     ];
+    pathText: string;
+
+    constructor(private singleton: Singleton) { 
+         this.pathText = singleton.solution;
+    }
 
     public enableColumns(){
         this.tickSelected = [];

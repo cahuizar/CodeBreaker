@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Singleton } from '../singleton.service';
 
 @Component({
   selector: 'app-keyword-encrypt',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KeywordEncryptComponent implements OnInit {
 
-  constructor() { }
+  pathText: string;
+
+  constructor(private singleton: Singleton) { 
+         this.pathText = singleton.solution;
+  }
 
   ngOnInit() {
   }
