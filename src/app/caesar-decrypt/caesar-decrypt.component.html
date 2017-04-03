@@ -14,7 +14,7 @@
                       Select the correct one:
                   </p>
                   <div class="center-aligned">
-                      <md-select placeholder="Result:" [(ngModel)]="selectedValue" >
+                      <md-select placeholder="Result:" [(ngModel)]="selectedValue" (change) = "shiftText()" >
                             <md-option *ngFor="let column of resultsColumns" [value]="column.value">
                               {{column.viewValue}}
                             </md-option>

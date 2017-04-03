@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CaesarShift } from '../caesar-shift';
+import { Singleton } from '../singleton.service';
 
 @Component({
   selector: 'app-caesar-decrypt',
@@ -9,14 +10,13 @@ import { CaesarShift } from '../caesar-shift';
 export class CaesarDecryptComponent implements OnInit {
   resultsColumns = [];
   pathText : string;
-  result: string;
   CaesarShift: CaesarShift;
+  selectedValue: string;
 
-  constructor(){
+  constructor(private singleton: Singleton){
     this.CaesarShift = new CaesarShift();
-    this.pathText = "ifmmpnzobnfjtdbsmpt";
+    this.pathText = singleton.solution;
     this.displayColumns();
-    console.log(`Encrypting: ${this.pathText}`);
   }
   
   displayColumns(){
@@ -24,6 +24,10 @@ export class CaesarDecryptComponent implements OnInit {
       let columnValue = this.CaesarShift.shift(this.pathText, i);
       this.resultsColumns.push({value: columnValue, viewValue: columnValue});
     }
+  }
+
+  shiftText(){
+    this.singleton.solution = this.selectedValue;
   }
 
   ngOnInit() {
