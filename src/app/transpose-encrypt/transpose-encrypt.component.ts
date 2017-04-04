@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Singleton } from '../singleton.service';
+import { Transpose } from '../transpose';
 
 @Component({
   selector: 'app-transpose-encrypt',
@@ -9,6 +10,7 @@ import { Singleton } from '../singleton.service';
 export class TransposeEncryptComponent{
     selectedValue: string;
     pathText: string;
+    transpose: Transpose;
 
     numColumns = [
         {value:1, viewValue: '1'},
@@ -19,6 +21,8 @@ export class TransposeEncryptComponent{
     ];
      constructor(private singleton: Singleton) { 
          this.pathText = singleton.solution;
+         this.transpose = new Transpose;
+         this.transpose.CalculateColumns();
      }
 
 

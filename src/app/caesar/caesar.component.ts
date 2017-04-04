@@ -28,11 +28,9 @@ export class CaesarComponent {
 
 
       constructor(private singleton: Singleton){
-        // shifted 1 should be ifmmpnzobnfjtdbsmpt
         this.CaesarShift = new CaesarShift();
         this.pathText = singleton.solution;
         this.generateColumns();
-        console.log(`Encrypting: ${this.pathText}`);
       }
 
       generateColumns(){
