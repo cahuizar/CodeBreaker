@@ -12,17 +12,12 @@ export class TransposeEncryptComponent{
     pathText: string;
     transpose: Transpose;
 
-    numColumns = [
-        {value:1, viewValue: '1'},
-        {value:2, viewValue: '2'},
-        {value:3, viewValue: '3'},
-        {value:4, viewValue: '4'},
-        {value:5, viewValue: '5'},
-    ];
+    numColumns = [];
      constructor(private singleton: Singleton) { 
          this.pathText = singleton.solution;
          this.transpose = new Transpose;
          this.transpose.CalculateColumns();
+         this.numColumns = this.transpose.Columns;
      }
 
 
