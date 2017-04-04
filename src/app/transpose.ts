@@ -22,15 +22,35 @@ export class Transpose {
     }
 
     TransposeColumns(): void {
+        // change them to contain the value selected from dropdown.
         let column = 4;
-        
+        let numOfIncrements = 3;
+        let solution = [];
+        let keepGoing = true;
+        let lowerBounds = 0;
+        let upperBounds = this._length;
+        let counter = numOfIncrements;
+
+        solution.push(this._text[lowerBounds]);
+        while(keepGoing){
+            if(counter > this._length){
+
+            }
+            else if(solution.length = this._length){
+                keepGoing = false;
+            }
+            else{
+                counter += numOfIncrements;
+                this
+            }
+        }
     }
 
     get Columns() {
         return this._numCols;
     }
 
-    get Solution() {
+    get Solution(): string {
         return this._solution;
     }
 
