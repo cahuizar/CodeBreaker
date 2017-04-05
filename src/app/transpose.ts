@@ -19,6 +19,7 @@ export class Transpose {
             }
         }
         console.log("Possible columns: ", this._numCols);
+        this.TransposeColumns();
     }
 
     TransposeColumns(): void {
@@ -27,23 +28,29 @@ export class Transpose {
         let numOfIncrements = 3;
         let solution = [];
         let keepGoing = true;
+        let counter = numOfIncrements;
         let lowerBounds = 0;
         let upperBounds = this._length;
-        let counter = numOfIncrements;
 
         solution.push(this._text[lowerBounds]);
         while(keepGoing){
-            if(counter > this._length){
-
-            }
-            else if(solution.length = this._length){
+            console.log("IN");
+            if(solution.length == this._length){
+                console.log("FUll");
                 keepGoing = false;
             }
-            else{
-                counter += numOfIncrements;
-                this
+            else if(counter+1 > upperBounds){
+                counter = (counter+1) - upperBounds;
+                solution.push(this._text[counter]);
+                console.log("Here is the current solution: ",solution)
             }
+            else{
+                console.log("counter: ", counter, "value:", this._text[counter]);
+                solution.push(this._text[counter]);
+            }
+            counter += numOfIncrements;
         }
+        console.log(solution);
     }
 
     get Columns() {
