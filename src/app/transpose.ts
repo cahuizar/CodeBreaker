@@ -1,7 +1,7 @@
 export class Transpose {
 
-    constructor() {
-        let text = "hellomynames";
+    constructor(pathText) {
+        let text = pathText;
         this._text = text.split('');
         this._length = this._text.length;
         this._solution = "";
@@ -19,17 +19,14 @@ export class Transpose {
             }
         }
         console.log("Possible columns: ", this._numCols);
-        this.TransposeColumns();
     }
 
-    TransposeColumns(): void {
+    TransposeColumns(column): void {
         // change them to contain the value selected from dropdown.
-        let column = 6;
-        let numOfIncrements = 2;
+        let numOfIncrements = this._length/column;
         let solution = [];
         let keepGoing = true;
         let counter = numOfIncrements;
-
         solution.push(this._text[0]);
         while(keepGoing){
             if(solution.length == this._length){
