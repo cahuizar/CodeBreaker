@@ -24,28 +24,22 @@ export class Transpose {
 
     TransposeColumns(): void {
         // change them to contain the value selected from dropdown.
-        let column = 4;
-        let numOfIncrements = 3;
+        let column = 6;
+        let numOfIncrements = 2;
         let solution = [];
         let keepGoing = true;
         let counter = numOfIncrements;
-        let lowerBounds = 0;
-        let upperBounds = this._length;
 
-        solution.push(this._text[lowerBounds]);
+        solution.push(this._text[0]);
         while(keepGoing){
-            console.log("IN");
             if(solution.length == this._length){
-                console.log("FUll");
                 keepGoing = false;
             }
-            else if(counter+1 > upperBounds){
-                counter = (counter+1) - upperBounds;
+            else if(counter+1 > this._length){
+                counter = (counter+1) - this._length;
                 solution.push(this._text[counter]);
-                console.log("Here is the current solution: ",solution)
             }
             else{
-                console.log("counter: ", counter, "value:", this._text[counter]);
                 solution.push(this._text[counter]);
             }
             counter += numOfIncrements;
