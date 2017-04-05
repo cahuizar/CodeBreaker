@@ -17,7 +17,6 @@ export class Transpose {
                 this._matrix.push({row: i, column: col});
             }
         }
-        console.log("Possible columns: ", this._numCols);
     }
 
     TransposeColumns(column): void {
@@ -41,6 +40,7 @@ export class Transpose {
             counter += numOfIncrements;
         }
         console.log(solution);
+        this._solution = solution.join("");
     }
 
     get Columns() {

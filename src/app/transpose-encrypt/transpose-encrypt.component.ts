@@ -21,9 +21,8 @@ export class TransposeEncryptComponent{
      }
 
      Calculate(): void{
-         this.transpose.TransposeColumns(this.selectedValue)
+         this.transpose.TransposeColumns(this.selectedValue);
+         this.singleton.solution = this.transpose.Solution;
      }
-
-
 
 }
