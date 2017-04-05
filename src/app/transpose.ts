@@ -13,7 +13,6 @@ export class Transpose {
         for(let i = 2; i <= 10; i++) {
             if(this._length%i == 0){
                 let col = this._length/i;
-                this._numCols.push(i);
                 this._numCols.push({value: i, viewValue: i});
                 this._matrix.push({row: i, column: col});
             }
