@@ -25,7 +25,7 @@
                   </p>
                   <div class="center-aligned">
                     <div *ngFor = "let column of totalColumns">
-                        <md-select placeholder="Column # {{column.viewValue}}" name="tickSelected" >
+                        <md-select placeholder="Column # {{column.viewValue}}" [(ngModel)]="column.viewValue" name="tickSelected" >
                               <md-option *ngFor="let columnValue of tickSelected" [value]="columnValue.value">
                                 {{columnValue.viewValue}}
                               </md-option>
@@ -34,7 +34,8 @@
                     </div>
                 </div>
                 <div class="center-aligned">
-                    <button md-raised-button class="home-button" routerLink="/encrypted">Submit</button>
+                    <button md-raised-button class="home-button" routerLink="/encrypted" (click)="submit()">Submit</button>
+                    <p>{{1}}</p>
                 </div>
                 </md-card-content>
             </md-card>

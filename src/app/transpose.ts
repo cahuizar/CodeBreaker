@@ -9,18 +9,15 @@ export class Transpose {
     }
 
     CalculateColumns(): void {
-        console.log("length: ",this._length, " text: ",this._text);
         for(let i = 2; i <= 10; i++) {
             if(this._length%i == 0){
                 let col = this._length/i;
                 this._numCols.push({value: i, viewValue: i});
-                this._matrix.push({row: i, column: col});
             }
         }
     }
 
     TransposeColumns(column): void {
-        // change them to contain the value selected from dropdown.
         let numOfIncrements = this._length/column;
         let solution = [];
         let keepGoing = true;
@@ -55,5 +52,4 @@ export class Transpose {
     private _text: string[];
     private _solution: string;
     private _numCols = [];
-    private _matrix = [];
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Singleton } from '../singleton.service';
+import { Anagram } from '../anagram';
 
 @Component({
   selector: 'app-anagram-encrypt',
@@ -11,18 +12,17 @@ export class AnagramEncryptComponent {
     tickSelected = [];
     totalColumns = [];
 
-    numColumns = [
-        {value:1, viewValue: '1'},
-        {value:2, viewValue: '2'},
-        {value:3, viewValue: '3'},
-        {value:4, viewValue: '4'},
-        {value:5, viewValue: '5'},
-    ];
+    numColumns = [];
 
     pathText: string;
+    anagram: Anagram;
+    colSelecion = [];
 
     constructor(private singleton: Singleton) { 
          this.pathText = singleton.text;
+         this.anagram = new Anagram(this.pathText);
+         this.anagram.CalculateColumns();
+         this.numColumns = this.anagram.Columns;
     }
 
     public enableColumns(){
@@ -36,6 +36,14 @@ export class AnagramEncryptComponent {
             this.tickSelected.push(columnValue);
             this.totalColumns.push(columnValue);
         }
+    }
+
+    public submit(){
+        for(let i = 1; i < this.totalColumns.length+1; i++){
+            let selection = document.getElementById("anagram-selection"+i);
+            this.colSelecion.push(selection);
+        }
+        console.log("Here is the column selected", this.colSelecion);
     }
 
 }
