@@ -14,7 +14,7 @@ export class TransposeEncryptComponent{
 
     numColumns = [];
      constructor(private singleton: Singleton) { 
-         this.pathText = singleton.solution;
+         this.pathText = singleton.text;
          this.transpose = new Transpose(this.pathText);
          this.transpose.CalculateColumns();
          this.numColumns = this.transpose.Columns;
@@ -24,5 +24,6 @@ export class TransposeEncryptComponent{
          this.transpose.TransposeColumns(this.selectedValue);
          this.singleton.solution = this.transpose.Solution;
      }
+
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Singleton } from '../singleton.service';
+import { Transpose } from '../transpose';
 
 @Component({
   selector: 'app-transpose-decrypt',
@@ -9,14 +10,32 @@ import { Singleton } from '../singleton.service';
 export class TransposeDecryptComponent {
     selectedValue: string;
     pathText: string;
-    numColumns = [
-        {value:1, viewValue: '1'},
-        {value:2, viewValue: '2'},
-        {value:3, viewValue: '3'},
-        {value:4, viewValue: '4'},
-        {value:5, viewValue: '5'},
-    ];
+    transpose: Transpose;
+    private _solution;
+
+    numColumns = [];
     constructor(private singleton: Singleton) { 
-         this.pathText = singleton.solution;
+        this._solution = "";
+        this.pathText = singleton.text;
+        this.transpose = new Transpose(this.pathText);
+        this.transpose.CalculateColumns();
+        this.numColumns = this.transpose.Columns;
+        
     }
+
+    Calculate(): void{
+        this.transpose.TransposeColumns(this.selectedValue);
+        this.singleton.solution = this.transpose.Solution;
+        this._solution = "Solution: "+this.transpose.Solution;
+    }
+
+    CheckEmpty(): void{
+        if(this.numColumns != null){
+            // display error message and disable selection
+        }
+        else{
+            // remove error message and enable section
+        }
+    }
+
 }

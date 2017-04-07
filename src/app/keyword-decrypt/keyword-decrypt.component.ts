@@ -11,7 +11,7 @@ export class KeywordDecryptComponent implements OnInit {
   pathText: string;
 
   constructor(private singleton: Singleton) { 
-         this.pathText = singleton.solution;
+         this.pathText = singleton.text;
   }
   
   ngOnInit() {

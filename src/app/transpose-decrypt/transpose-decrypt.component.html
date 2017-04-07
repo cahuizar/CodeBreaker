@@ -14,17 +14,20 @@
                       Slect the column size of your matrix
                   </p>
                   <div class="center-aligned">
-                      <md-select placeholder="# of Columns" [(ngModel)]="selectedValue" name="numColumns" >
+                      <md-select placeholder="# of Columns" [(ngModel)]="selectedValue" name="numColumns" (change) = "Calculate()"  >
                             <md-option *ngFor="let column of numColumns" [value]="column.value">
                               {{column.viewValue}}
                             </md-option>
                     </md-select>
                 </div>
                 <div class="center-aligned">
-                    <button md-raised-button class="home-button" routerLink="/encrypted">Submit</button>
+                    <button md-raised-button class="home-button" routerLink="/solution">Submit</button>
                 </div>
                 </md-card-content>
             </md-card>
+            <div class="center-aligned solution-decrypt">
+                <p>{{_solution}}</p>
+            </div>
         </div>
 
     </div>

@@ -18,12 +18,12 @@ export class HomeComponent implements OnInit {
 
     encrypt(text: HTMLInputElement){
         this.text = text.value.replace(/\s+/g, '');
-        this.singleton.solution = this.text;
+        this.singleton.text = this.text;
         return false;
     }
     decrypt(text: HTMLInputElement){
         this.text = text.value.replace(/\s+/g, '');
-        this.singleton.solution = this.text;
+        this.singleton.text = this.text;
         return false;
     }
 }

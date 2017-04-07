@@ -22,7 +22,7 @@ export class AnagramEncryptComponent {
     pathText: string;
 
     constructor(private singleton: Singleton) { 
-         this.pathText = singleton.solution;
+         this.pathText = singleton.text;
     }
 
     public enableColumns(){

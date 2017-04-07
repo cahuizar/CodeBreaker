@@ -281,6 +281,13 @@ p.solution{
     font-size:40px;
 }
 
+.solution-decrypt{
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    word-break: break-all;
+}
+
 @media (max-width: 880px) {
     .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
         display: block;
