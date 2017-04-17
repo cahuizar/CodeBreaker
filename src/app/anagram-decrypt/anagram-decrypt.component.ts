@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Singleton } from '../singleton.service';
+import { Anagram } from '../anagram';
 
 @Component({
   selector: 'app-anagram-decrypt',
@@ -8,20 +9,21 @@ import { Singleton } from '../singleton.service';
 })
 export class AnagramDecryptComponent {
     selectedValue: string;
+    test: string;
     tickSelected = [];
     totalColumns = [];
 
-    numColumns = [
-        {value:1, viewValue: '1'},
-        {value:2, viewValue: '2'},
-        {value:3, viewValue: '3'},
-        {value:4, viewValue: '4'},
-        {value:5, viewValue: '5'},
-    ];
+    numColumns = [];
+
     pathText: string;
+    anagram: Anagram;
+    colSelecion = [];
 
     constructor(private singleton: Singleton) {
          this.pathText = singleton.text;
+         this.anagram = new Anagram(this.pathText);
+         this.anagram.CalculateColumns();
+         this.numColumns = this.anagram.Columns;
     }
 
     public enableColumns(){
@@ -31,10 +33,17 @@ export class AnagramDecryptComponent {
         var columnValue;
         for(var i = 1; i <= test; i++){
             columnValue = {value: i, viewValue:i};
-            console.log(columnValue.viewValue);
             this.tickSelected.push(columnValue);
             this.totalColumns.push(columnValue);
         }
+    }
+    public submit(){
+        for(let i = 1; i < this.totalColumns.length+1; i++){
+            let selection = (<HTMLInputElement>document.getElementById("column"+i)).value;
+            this.colSelecion.push(selection);
+        }
+        this.anagram.CalculateAnagram(this.totalColumns.length, this.colSelecion);
+        this.singleton.solution = this.anagram.Solution;
     }
 
 }
