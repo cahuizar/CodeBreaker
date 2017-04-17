@@ -288,6 +288,14 @@ p.solution{
     word-break: break-all;
 }
 
+select{
+    width: 50px;
+    font-size: 16px;
+    height: 20px;
+    margin-left: 5px;
+
+}
+
 @media (max-width: 880px) {
     .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
         display: block;

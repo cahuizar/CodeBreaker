@@ -25,6 +25,7 @@
                   </p>
                   <div class="center-aligned">
                     <div *ngFor = "let column of totalColumns">
+                        Column #{{column.viewValue}}:
                         <select id = "column{{column.viewValue}}">
                             <option *ngFor="let columnValue of tickSelected" value = "{{columnValue.value}}">{{columnValue.viewValue}}</option>
                         </select>

@@ -1,6 +1,5 @@
 export class Anagram {
     constructor(text){
-        text = "hellomynames";
         this._text = text.split('');
         this._length = this._text.length;
         this._solution = "";
@@ -24,18 +23,15 @@ export class Anagram {
             for(; counter < upperBounds; counter++){
                 tempText.push(this._text[counter]);
             }
-            console.log("Text so far: ", tempText, " counter: ", counter, "upperBounds: ", upperBounds);
-            this.ReOrganizeColumns(tempText, colOrder);
+            this.ReOrganizeColumns(tempText, colOrder, column);
             upperBounds += column;
         }
-        console.log("Temp Solution so far: ", this._tempSolution);
         this._solution = this._tempSolution.join("");
 
     }
 
-    ReOrganizeColumns(tempText, colOrder): void {
-        for(let i = 0; i < 4; i++){
-            console.log("TempText re ordered value: ", tempText[colOrder[i]-1]);
+    ReOrganizeColumns(tempText, colOrder, column): void {
+        for(let i = 0; i < column; i++){
             this._tempSolution.push(tempText[colOrder[i]-1]);
         }
     }

@@ -45,7 +45,6 @@ export class AnagramEncryptComponent {
             this.colSelecion.push(selection);
         }
         this.anagram.CalculateAnagram(this.totalColumns.length, this.colSelecion);
-        console.log("Here is the column selected", this.colSelecion);
         this.singleton.solution = this.anagram.Solution;
     }
 
