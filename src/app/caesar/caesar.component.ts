@@ -30,6 +30,10 @@ export class CaesarComponent {
       constructor(private singleton: Singleton){
         this.CaesarShift = new CaesarShift();
         this.pathText = singleton.text;
+        this.singleton.frequency();
+        console.log(this.singleton.single());
+        console.log(this.singleton.double());
+        console.log(this.singleton.triple());
         this.generateColumns();
       }
 
