@@ -15,12 +15,7 @@ export class Anagram {
         }
     }
 
-    CalculateAnagram(): void {
-        // replace with actual column received from user.
-        let column = 4;
-        // rember to subratrct one from each column
-        let colOrder = [4,1,3,2];
-
+    CalculateAnagram(column, colOrder): void {
         let numIterations = this._length/column;
         let upperBounds = column;
         let counter = 0;
@@ -35,7 +30,7 @@ export class Anagram {
         }
         console.log("Temp Solution so far: ", this._tempSolution);
         this._solution = this._tempSolution.join("");
-        
+
     }
 
     ReOrganizeColumns(tempText, colOrder): void {

@@ -9,6 +9,7 @@ import { Anagram } from '../anagram';
 })
 export class AnagramEncryptComponent {
     selectedValue: string;
+    test: string;
     tickSelected = [];
     totalColumns = [];
 
@@ -18,7 +19,7 @@ export class AnagramEncryptComponent {
     anagram: Anagram;
     colSelecion = [];
 
-    constructor(private singleton: Singleton) { 
+    constructor(private singleton: Singleton) {
          this.pathText = singleton.text;
          this.anagram = new Anagram(this.pathText);
          this.anagram.CalculateColumns();
@@ -40,10 +41,12 @@ export class AnagramEncryptComponent {
 
     public submit(){
         for(let i = 1; i < this.totalColumns.length+1; i++){
-            let selection = document.getElementById("anagram-selection"+i);
+            let selection = (<HTMLInputElement>document.getElementById("column"+i)).value;
             this.colSelecion.push(selection);
         }
+        this.anagram.CalculateAnagram(this.totalColumns.length, this.colSelecion);
         console.log("Here is the column selected", this.colSelecion);
+        this.singleton.solution = this.anagram.Solution;
     }
 
 }

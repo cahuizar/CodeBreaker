@@ -20,7 +20,7 @@ export class AnagramDecryptComponent {
     ];
     pathText: string;
 
-    constructor(private singleton: Singleton) { 
+    constructor(private singleton: Singleton) {
          this.pathText = singleton.text;
     }
 
