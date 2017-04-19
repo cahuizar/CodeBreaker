@@ -19,11 +19,13 @@ export class HomeComponent implements OnInit {
     encrypt(text: HTMLInputElement){
         this.text = text.value.replace(/\s+/g, '');
         this.singleton.text = this.text;
+        this.singleton.frequency();
         return false;
     }
     decrypt(text: HTMLInputElement){
         this.text = text.value.replace(/\s+/g, '');
         this.singleton.text = this.text;
+        this.singleton.frequency();
         return false;
     }
 }

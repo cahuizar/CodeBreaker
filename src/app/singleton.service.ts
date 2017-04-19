@@ -5,7 +5,7 @@ import { Frequency } from './frequency';
 export class Singleton {
   private _solution;
   private _text;
-  private _frequency: Frequency
+  private _frequency: Frequency;
 
   frequency(): void{
     this._frequency = new Frequency(this._text);
@@ -29,15 +29,15 @@ export class Singleton {
   }
 
   get single(){
-    return this._frequency.Single();
+    return this._frequency.single;
   }
 
   get double(){
-    return this._frequency.Double();
+    return this._frequency.double;
   }
 
   get triple(){
-    return this._frequency.Triple();
+    return this._frequency.triple;
   }
 
 }

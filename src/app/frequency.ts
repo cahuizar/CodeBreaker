@@ -71,15 +71,15 @@ export class Frequency {
         }
     }
 
-    get Single(){
-        return this._single;
+    get single(){
+        return this._text;
     }
     
-    get Double(){
+    get double(){
         return this._double;
     }
 
-    get Triple(){
+    get triple(){
         return this._triple;
     }
 
