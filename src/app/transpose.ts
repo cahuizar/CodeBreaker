@@ -36,7 +36,6 @@ export class Transpose {
             }
             counter += numOfIncrements;
         }
-        console.log(solution);
         this._solution = solution.join("");
     }
 

@@ -1,16 +1,16 @@
 export class Frequency {
     
     constructor(text){
-        text = "hellomynamesiscarlossllmyn";
         this._text = text.split('');
         this._length = this._text.length;
         this._alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
         this._alphabetLength = this._alphabet.length;
-        this._single = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        this._singleCounter = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         this._doubleHolder = [];
         this._doubleCounter = [];
         this._tripleHolder = [];
         this._tripleCounter = [];
+        this._single = [];
         this._double = [];
         this._triple = []
     }
@@ -20,7 +20,7 @@ export class Frequency {
             let tempHolder = this._text[x];
             for(let y = 0; y < this._alphabetLength; y++){
                 if(tempHolder == this._alphabet[y]){
-                    this._single[y] = this._single[y] + 1;
+                    this._singleCounter[y] = this._singleCounter[y] + 1;
                     this.MultipleFrequency(x);
                     break;
                 }
@@ -63,16 +63,21 @@ export class Frequency {
     }
 
     CombineFrequencies(): void{
-        for(let x = 0; x < this._doubleHolder; x++){
+        for(let x = 0; x < this._alphabetLength; x++){
+            if(this._singleCounter[x] != 0){
+                this._single.push({value: this._alphabet[x], counter: this._singleCounter[x]});
+            }
+        }
+        for(let x = 0; x < this._doubleHolder.length; x++){
             this._double.push({value: this._doubleHolder[x], counter: this._doubleCounter[x]});
         }
-        for(let x = 0; x < this._tripleHolder; x++){
+        for(let x = 0; x < this._tripleHolder.length; x++){
             this._triple.push({value: this._tripleHolder[x], counter: this._tripleCounter[x]});
         }
     }
 
     get single(){
-        return this._text;
+        return this._single;
     }
     
     get double(){
@@ -87,11 +92,12 @@ export class Frequency {
     private _length: number;
     private _alphabet;
     private _alphabetLength: number;
-    private _single;
+    private _singleCounter;
     private _doubleHolder;
     private _doubleCounter;
     private _tripleHolder;
     private _tripleCounter;
+    private _single;
     private _double;
     private _triple;
 

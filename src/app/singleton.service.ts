@@ -6,10 +6,16 @@ export class Singleton {
   private _solution;
   private _text;
   private _frequency: Frequency;
+  private _single;
+  private _double;
+  private _triple;
 
   frequency(): void{
     this._frequency = new Frequency(this._text);
     this._frequency.Frequency();
+    this._single = this._frequency.single;
+    this._double = this._frequency.double;
+    this._triple = this._frequency.triple;
   }
 
   set text(text){
@@ -29,15 +35,15 @@ export class Singleton {
   }
 
   get single(){
-    return this._frequency.single;
+    return this._single;
   }
 
   get double(){
-    return this._frequency.double;
+    return this._double;
   }
 
   get triple(){
-    return this._frequency.triple;
+    return this._triple;
   }
 
 }

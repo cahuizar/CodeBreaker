@@ -33,7 +33,6 @@ export class AnagramEncryptComponent {
         var columnValue;
         for(var i = 1; i <= test; i++){
             columnValue = {value: i, viewValue:i};
-            console.log(columnValue.viewValue);
             this.tickSelected.push(columnValue);
             this.totalColumns.push(columnValue);
         }

@@ -27,6 +27,7 @@ import { TransposeDecryptComponent } from './transpose-decrypt/transpose-decrypt
 import { AnagramDecryptComponent } from './anagram-decrypt/anagram-decrypt.component';
 import { SolutionComponent } from './solution/solution.component';
 import { Singleton } from './singleton.service';
+import { FrequencyComponent } from './frequency/frequency.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
     { path: 'transpose-decrypt', component: TransposeDecryptComponent },
     { path: 'caesar-decrypt', component: CaesarDecryptComponent },
     { path: 'solution', component: SolutionComponent },
+    { path: 'frequency', component: FrequencyComponent },
     { path: '', component: HomeComponent },
     { path: '**', component: HomeComponent }
 ];
@@ -67,6 +69,7 @@ const appRoutes: Routes = [
     TransposeDecryptComponent,
     AnagramDecryptComponent,
     SolutionComponent,
+    FrequencyComponent,
   ],
   imports: [
     BrowserModule,

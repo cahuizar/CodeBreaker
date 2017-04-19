@@ -1,0 +1,56 @@
+<div class="row">
+    <app-decrypt-header-buttons></app-decrypt-header-buttons>
+    <div class="col-xs-12">
+        <div class="slider-div center-block">
+            <md-card>
+              <md-card-content>
+                  <p class="cipher-title">
+                      Frequency Analysis
+                  </p>
+                  <p class="cipher-description">
+                      <b>Description -</b> Shows you the frequency of the letters that repeat on the ciphertext (Single, doubles and triples)
+                  </p>
+                  <br />
+                  <p class="cipher-question">
+                      Single: (Not shown are equal to 0)
+                  </p>
+                    <div class = "row">
+                      <div class = "center-aligned">
+                        <div *ngFor="let column of _single">
+                          <div class="col-xs-3">
+                            {{column.value}} = {{column.counter}}
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <br />
+                  <p class="cipher-question">
+                      Double:
+                  </p>
+                    <div class = "row">
+                      <div class = "center-aligned">
+                        <div *ngFor="let column of _double">
+                          <div class="col-xs-3">
+                            {{column.value}} = {{column.counter}}
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <br />
+                  <p class="cipher-question">
+                      Triple:
+                  </p>
+                    <div class = "row">
+                      <div class = "center-aligned">
+                        <div *ngFor="let column of _triple">
+                          <div class="col-xs-3">
+                            {{column.value}} = {{column.counter}}
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+</div>

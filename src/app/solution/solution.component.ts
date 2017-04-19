@@ -11,7 +11,6 @@ export class SolutionComponent implements OnInit {
   
   constructor(private singleton: Singleton) {
     this._solution = singleton.solution;
-    console.log('you did it:',this._solution);
   }
 
   ngOnInit() {

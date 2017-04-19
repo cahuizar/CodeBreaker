@@ -29,7 +29,6 @@ export class CaesarComponent {
 
       constructor(private singleton: Singleton){
         this.CaesarShift = new CaesarShift();
-        this.pathText = singleton.text;
         this.generateColumns();
       }
 
@@ -42,7 +41,6 @@ export class CaesarComponent {
       shiftText(){
         this.result = this.CaesarShift.shift(this.pathText, this.selectedValue);
         this.singleton.solution = this.result;
-        console.log(`Result: ${this.result}`);
       }
 
 }
