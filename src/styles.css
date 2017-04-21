@@ -262,7 +262,7 @@ md-input-container{
     margin-top: 40px;
 }
 
-p.solution{
+p.solution-text{
     font-size: 22px;
     text-align: center;
     padding: 30px;
@@ -275,6 +275,10 @@ p.solution{
     -webkit-border-radius: 50px 50px 50px 50px;
     border: 1px solid #000000;
     width: 50%;
+}
+
+.padding-top{
+    padding-top: 40px;
 }
 
 .solution-github-icon{

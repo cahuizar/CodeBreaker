@@ -15,11 +15,11 @@
                   </p>
                   <div class="center-aligned">
                       <md-input-container>
-                          <input mdInput placeholder="Keyword">
+                          <input mdInput placeholder="Keyword" [(ngModel)]="keyword" (change) = "removeDuplicateCharacters()">
                       </md-input-container>
                 </div>
                 <div class="center-aligned">
-                    <button md-raised-button class="home-button" routerLink="/encrypted">Submit</button>
+                    <button md-raised-button class="home-button" routerLink="/solution">Submit</button>
                 </div>
                 </md-card-content>
             </md-card>
