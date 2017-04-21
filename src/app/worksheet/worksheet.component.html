@@ -1,0 +1,158 @@
+<div class="row">
+    <app-decrypt-header-buttons></app-decrypt-header-buttons>
+    <br /> <br />
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="a"  mdInput placeholder="a = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="b"  mdInput placeholder="b = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="c"  mdInput placeholder="c = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="d"  mdInput placeholder="d = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="e"  mdInput placeholder="e = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="f"  mdInput placeholder="f = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="g"  mdInput placeholder="g = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="h"  mdInput placeholder="h = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="i"  mdInput placeholder="i = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="j"  mdInput placeholder="j = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="k"  mdInput placeholder="k = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="l"  mdInput placeholder="l = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="m"  mdInput placeholder="m = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="n"  mdInput placeholder="n = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="o"  mdInput placeholder="o = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="p"  mdInput placeholder="p = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="q"  mdInput placeholder="q = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="r"  mdInput placeholder="r = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="s"  mdInput placeholder="s = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="t"  mdInput placeholder="t = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="u"  mdInput placeholder="u = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="v"  mdInput placeholder="v = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="w"  mdInput placeholder="w = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="x"  mdInput placeholder="x = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="y"  mdInput placeholder="y = ">
+        </md-input-container>
+    </div>
+    <div class="col-xs-1">
+        <md-input-container (change)="PushValue()">
+          <input [(ngModel)]="z"  mdInput placeholder="z = ">
+        </md-input-container>
+    </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-1 col-sm-11">
+    <p>
+      Here is the ciphered text:
+    </p>
+  </div>
+  <div class="col-xs-12">
+     <div class="solution center-block">
+      <p class="worksheet-solution">{{text}}</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-1 col-sm-11">
+    <p>
+      Here is the solution:
+    </p>
+  </div>
+  <div class="col-xs-12">
+     <div class="solution center-block">
+      <p class="worksheet-solution">{{solution}}</p>
+    </div>
+  </div>
+</div>

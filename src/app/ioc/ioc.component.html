@@ -1,0 +1,29 @@
+<div class="row">
+    <app-decrypt-header-buttons></app-decrypt-header-buttons>
+    <div class="col-xs-12">
+        <div class="slider-div center-block">
+            <md-card>
+              <md-card-content>
+                  <p class="cipher-title">
+                      Index of Coincidence
+                  </p>
+                  <p class="cipher-description">
+                      <b>Description -</b> Shows you the index of coincidence of the cipher text that will tell you how many alphabets are used.
+                  </p>
+                  <p class="cipher-question">
+                      Here is your index of coincidence:
+                  </p>
+                  <div class="center-aligned ioc">
+                    {{_ioc}}
+                  </div>
+                  <p class="cipher-question">
+                      Number of alphabets:
+                  </p>
+                  <div class="center-aligned ioc">
+                    {{_numAlphabets}}
+                  </div>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+</div>

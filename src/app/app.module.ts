@@ -28,6 +28,8 @@ import { AnagramDecryptComponent } from './anagram-decrypt/anagram-decrypt.compo
 import { SolutionComponent } from './solution/solution.component';
 import { Singleton } from './singleton.service';
 import { FrequencyComponent } from './frequency/frequency.component';
+import { IocComponent } from './ioc/ioc.component';
+import { WorksheetComponent } from './worksheet/worksheet.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -43,6 +45,8 @@ const appRoutes: Routes = [
     { path: 'caesar-decrypt', component: CaesarDecryptComponent },
     { path: 'solution', component: SolutionComponent },
     { path: 'frequency', component: FrequencyComponent },
+    { path: 'ioc', component: IocComponent },
+    { path: 'worksheet', component: WorksheetComponent },
     { path: '', component: HomeComponent },
     { path: '**', component: HomeComponent }
 ];
@@ -70,6 +74,8 @@ const appRoutes: Routes = [
     AnagramDecryptComponent,
     SolutionComponent,
     FrequencyComponent,
+    IocComponent,
+    WorksheetComponent,
   ],
   imports: [
     BrowserModule,

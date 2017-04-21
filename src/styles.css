@@ -296,6 +296,20 @@ select{
 
 }
 
+.ioc{
+    font-size: 40px;
+}
+
+.solution{
+    width: 50%;
+}
+
+.worksheet-solution{
+    letter-spacing: 10px;
+    font-size: 24px;
+    word-break: break-all;
+}
+
 @media (max-width: 880px) {
     .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
         display: block;
