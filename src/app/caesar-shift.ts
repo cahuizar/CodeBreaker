@@ -1,39 +1,22 @@
 export class CaesarShift {
-    shift(str, amount) {
-
-        // Wrap the amount
-        if (amount < 0)
-          return this.shift(str, amount + 26);
-
-        // Make an output variable
-        var output = '';
-
-        // Go through each character
-        for (var i = 0; i < str.length; i ++) {
-
-          // Get the character we'll be appending
-          var c = str[i];
-
-          // If it's a letter...
-          if (c.match(/[a-z]/i)) {
-
-            // Get its code
-            var code = str.charCodeAt(i);
-
-            // Uppercase letters
-            if ((code >= 65) && (code <= 90))
-              c = String.fromCharCode(((code - 65 + amount) % 26) + 65);
-
-            // Lowercase letters
-            else if ((code >= 97) && (code <= 122))
-              c = String.fromCharCode(((code - 97 + amount) % 26) + 97);
-          }
-          // Append
-          output += c;
+    shift(text, totalShift) {
+        if (totalShift < 0){
+          return this.shift(text, totalShift + 26);
         }
-
-        // All done!
-        return output;
-
+        var result = '';
+        for (var x = 0; x < text.length; x++) {
+          var char = text[x];
+          if (char.match(/[a-z]/i)) {
+            var value = text.charCodeAt(x);
+            if ((value >= 65) && (value <= 90)){
+              char = String.fromCharCode(((value - 65 + totalShift) % 26) + 65);
+            }
+            else if ((value >= 97) && (value <= 122)){
+              char = String.fromCharCode(((value - 97 + totalShift) % 26) + 97);
+            }
+          }
+          result += char;
+        }
+        return result;
       }
 }

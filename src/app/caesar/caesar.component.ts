@@ -29,6 +29,7 @@ export class CaesarComponent {
 
       constructor(private singleton: Singleton){
         this.CaesarShift = new CaesarShift();
+        this.pathText = this.singleton.text;
         this.generateColumns();
       }
 
